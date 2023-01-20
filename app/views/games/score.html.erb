@@ -1,1 +1,10 @@
-<h1>the score page</h1>
+<h1>Result</h1>
+<% @answer = params[:word] %>
+<% if @included %>
+<%= @dictionary %>
+<% else %>
+  <p>Sorry, but <%= @answer %> can't be build out of <%= @letters %></p>
+<% end %>
+
+
+<%= link_to"play again", new_path %>
